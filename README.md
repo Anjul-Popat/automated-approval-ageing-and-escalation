@@ -69,7 +69,7 @@ The challenge was ensuring that delayed approvals did not remain unnoticed.
 
 ## Solution Architecture
 
-![Automated Approval Ageing and Escalation Architecture](approval-escalation-architecture.png.png)
+![Automated Approval Ageing and Escalation Architecture](approval-escalation-architecture.png)
 
 ---
 

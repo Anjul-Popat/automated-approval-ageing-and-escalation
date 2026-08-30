@@ -6,7 +6,7 @@ This project demonstrates an automated approach for monitoring approval ageing a
 
 In many business processes, a transaction must pass through several sequential approval stages before downstream activities can begin. A delay at any one stage can create a bottleneck and prevent the entire process from moving forward.
 
-This solution uses **SQL Server and SSRS** to:
+This solution uses SQL Server and SSRS to:
 
 - Monitor pending approvals
 - Calculate approval ageing
@@ -66,9 +66,13 @@ The challenge was not making the approval decision itself.
 The challenge was ensuring that delayed approvals did not remain unnoticed.
 
 ---
+
 ## Solution Architecture
 
-![Approval Escalation Architecture](approval-escalation-architecture.png)
+![Automated Approval Ageing and Escalation Architecture](approval-escalation-architecture.png.png)
+
+---
+
 ## The Solution
 
 The process was transformed into an automated monitoring and escalation workflow.
@@ -144,17 +148,18 @@ The automation provides visibility of delayed tasks while allowing the actual ap
 automated-approval-ageing-and-escalation/
 │
 ├── README.md
+├── approval-escalation-architecture.png.png
 │
 ├── docs/
-│   ├── architecture.md
-│   └── lean-impact.md
+│   ├── 01-architecture.md
+│   ├── 02-implementation-guide.md
+│   ├── 03-lean-impact.md
+│   └── 04-business-impact.md
 │
-├── sql/
-│   ├── 01-approval-ageing-analysis.sql
-│   ├── 02-escalation-level-identification.sql
-│   └── 03-multi-level-escalation-example.sql
-│
-└── images/
+└── sql/
+    ├── 01-approval-ageing-analysis.sql
+    ├── 02-escalation-level-identification.sql
+    └── 03-multi-level-escalation-example.sql
 ```
 
 ---
@@ -177,7 +182,7 @@ Within SLA / SLA Breached
 
 Example file:
 
-`sql/01-approval-ageing-analysis.sql`
+[`sql/01-approval-ageing-analysis.sql`](sql/01-approval-ageing-analysis.sql)
 
 ---
 
@@ -195,7 +200,7 @@ Determine Escalation Action
 
 Example file:
 
-`sql/02-escalation-level-identification.sql`
+[`sql/02-escalation-level-identification.sql`](sql/02-escalation-level-identification.sql)
 
 ---
 
@@ -213,15 +218,17 @@ Senior Management Escalation
 
 Example file:
 
-`sql/03-multi-level-escalation-example.sql`
+[`sql/03-multi-level-escalation-example.sql`](sql/03-multi-level-escalation-example.sql)
 
 ---
 
-## Architecture
+## Project Documentation
+
+### 1. Solution Architecture
 
 The complete solution architecture is documented here:
 
-[`docs/architecture.md`](docs/architecture.md)
+[`docs/01-architecture.md`](docs/01-architecture.md)
 
 The architecture covers:
 
@@ -235,7 +242,27 @@ The architecture covers:
 
 ---
 
-## Lean and Business Impact
+### 2. Implementation Guide
+
+The implementation approach is documented here:
+
+[`docs/02-implementation-guide.md`](docs/02-implementation-guide.md)
+
+This guide covers:
+
+- Pending approval identification
+- Approval ageing calculation
+- Responsible approver identification
+- Automated reminders
+- First-level escalation
+- Second-level escalation
+- SSRS subscriptions
+- Escalation timing
+- End-to-end process flow
+
+---
+
+### 3. Lean Impact
 
 The project was designed using an exception-management approach.
 
@@ -254,22 +281,28 @@ The solution helps reduce:
 
 The detailed Lean perspective is available here:
 
-[`docs/lean-impact.md`](docs/lean-impact.md)
+[`docs/03-lean-impact.md`](docs/03-lean-impact.md)
 
 ---
 
-## Reported Business Outcome
+### 4. Business Impact
 
-The solution improved:
+The operational and business impact of the solution is documented here:
 
-- Visibility of pending approvals
-- Accountability for delayed actions
-- Escalation of overdue tasks
-- Transparency across the approval workflow
+[`docs/04-business-impact.md`](docs/04-business-impact.md)
+
+The solution contributed to:
+
+- Improved visibility of pending approvals
+- Increased accountability for delayed actions
+- Automated follow-up
+- Faster escalation of overdue tasks
+- Reduced dependency on manual monitoring
+- Improved transparency across the approval workflow
 
 The client reported a broader year-on-year business impact of approximately **₹30 lakh** following the implementation period.
 
-This figure may have been influenced by multiple operational and business factors and is **not presented as savings attributable solely to this automation**.
+However, this figure should not be interpreted as savings generated solely by this automation. The overall business outcome may have been influenced by multiple operational and business factors.
 
 ---
 
@@ -336,7 +369,7 @@ Continue Monitoring
 
 ## Confidentiality Notice
 
-This repository documents the **technical design and automation pattern** using fictional examples.
+This repository documents the technical design and automation pattern using fictional examples.
 
 To protect confidential business information:
 
@@ -352,7 +385,7 @@ The repository is intended to demonstrate the technical and process-improvement 
 
 ## Conclusion
 
-This project demonstrates how **SQL Server and SSRS can be used beyond traditional reporting** to create a lightweight approval monitoring and escalation framework.
+This project demonstrates how SQL Server and SSRS can be used beyond traditional reporting to create a lightweight approval monitoring and escalation framework.
 
 The overall transformation is:
 
@@ -370,4 +403,4 @@ Exception-Based Management
 
 The objective is simple:
 
-**Make pending approvals visible, ensure delayed actions receive attention, and prevent bottlenecks from remaining hidden.**
+> **Make pending approvals visible, ensure delayed actions receive attention, and prevent bottlenecks from remaining hidden.**

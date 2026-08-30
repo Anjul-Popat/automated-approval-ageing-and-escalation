@@ -68,7 +68,7 @@ The challenge was ensuring that delayed approvals did not remain unnoticed.
 ---
 ## Solution Architecture
 
-![Approval Escalation Architecture](approval-escalation-architecture.png.png)
+![Approval Escalation Architecture](approval-escalation-architecture.png)
 ## The Solution
 
 The process was transformed into an automated monitoring and escalation workflow.
